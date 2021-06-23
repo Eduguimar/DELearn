@@ -1,5 +1,5 @@
 # DELEARN
-[![NPM](https://github.com/Eduguimar/DELearn/blob/master/LICENSE) 
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/Eduguimar/DELearn/blob/master/LICENSE) 
 
 
 ## Sobre o Projeto (em construção)
