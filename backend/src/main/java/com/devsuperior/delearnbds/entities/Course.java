@@ -2,6 +2,8 @@ package com.devsuperior.delearnbds.entities;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -15,14 +17,18 @@ public class Course implements Serializable {
     private String imgUri;
     private String imgGrayUri;
 
+    @OneToMany(mappedBy = "course")
+    private List<Offer> offers = new ArrayList<>();
+
     public Course() {
     }
 
-    public Course(Long id, String name, String imgUri, String imgGrayUri) {
+    public Course(Long id, String name, String imgUri, String imgGrayUri, List<Offer> offers) {
         this.id = id;
         this.name = name;
         this.imgUri = imgUri;
         this.imgGrayUri = imgGrayUri;
+        this.offers = offers;
     }
 
     public Long getId() {
@@ -55,6 +61,10 @@ public class Course implements Serializable {
 
     public void setImgGrayUri(String imgGrayUri) {
         this.imgGrayUri = imgGrayUri;
+    }
+
+    public List<Offer> getOffers() {
+        return offers;
     }
 
     @Override
