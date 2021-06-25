@@ -4,6 +4,8 @@ import com.devsuperior.delearnbds.entities.enums.ResourceType;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -23,10 +25,13 @@ public class Resource implements Serializable {
     @JoinColumn(name = "offer_id")
     private Offer offer;
 
+    @OneToMany(mappedBy = "resource")
+    private List<Section> sections = new ArrayList<>();
+
     public Resource() {
     }
 
-    public Resource(Long id, String title, String description, Integer position, String imgUri, ResourceType type, Offer offer) {
+    public Resource(Long id, String title, String description, Integer position, String imgUri, ResourceType type, Offer offer, List<Section> sections) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -34,6 +39,7 @@ public class Resource implements Serializable {
         this.imgUri = imgUri;
         this.type = type;
         this.offer = offer;
+        this.sections = sections;
     }
 
     public Long getId() {
@@ -90,6 +96,10 @@ public class Resource implements Serializable {
 
     public void setOffer(Offer offer) {
         this.offer = offer;
+    }
+
+    public List<Section> getSections() {
+        return sections;
     }
 
     @Override
