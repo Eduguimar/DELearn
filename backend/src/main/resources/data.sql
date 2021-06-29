@@ -28,3 +28,18 @@ INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prer
 
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2020-08-02T12:00:00Z', null, true, false);
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2020-08-02T11:00:00Z', null, true, false);
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Primeira lição do capitulo 1', 1, 1);
+INSERT INTO tb_content (id, text_Content, video_Uri) VALUES (1, 'conteúdo firmeza', 'https://www.youtube.com/watch?v=OX5MmJrFTdw');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Segunda lição do capitulo 1', 2, 1);
+INSERT INTO tb_content (id, text_Content, video_Uri) VALUES (2, 'conteúdo firmeza demais', 'https://www.youtube.com/watch?v=OX5MmJrFTdw');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Terceira lição do capitulo 1', 3, 1);
+INSERT INTO tb_content (id, text_Content, video_Uri) VALUES (3, 'conteúdo mais que firmeza', 'https://www.youtube.com/watch?v=OX5MmJrFTdw');
+
+INSERT INTO tb_lesson (title, position, section_id) VALUES ('Tarefinha do capitulo 1', 4, 1);
+INSERT INTO tb_task (id, description, question_Count, approval_Count, weight, due_Date) VALUES (4, 'Tarefa do cap 1', 5, 4, 1.0, TIMESTAMP WITH TIME ZONE '2021-08-01T12:00:00Z');
+
+INSERT INTO tb_lessons_done (user_id, offer_id, lesson_id) VALUES (1, 1, 1);
+INSERT INTO tb_lessons_done (user_id, offer_id, lesson_id) VALUES (1, 1, 2);
