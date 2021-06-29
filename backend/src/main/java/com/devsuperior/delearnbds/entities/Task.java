@@ -1,5 +1,6 @@
 package com.devsuperior.delearnbds.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.time.Instant;
@@ -12,6 +13,8 @@ public class Task extends Lesson{
     private Integer questionCount;
     private Integer approvalCount;
     private Double weight;
+
+    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant dueDate;
 
     public Task() {
