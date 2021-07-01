@@ -43,3 +43,7 @@ INSERT INTO tb_task (id, description, question_Count, approval_Count, weight, du
 
 INSERT INTO tb_lessons_done (user_id, offer_id, lesson_id) VALUES (1, 1, 1);
 INSERT INTO tb_lessons_done (user_id, offer_id, lesson_id) VALUES (1, 1, 2);
+
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Primeira tarefa: favor revisar', TIMESTAMP WITH TIME ZONE '2021-05-01T12:00:00Z', true, '/offers/1/resource/1/sections/1', 1);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Segunda tarefa: favor revisar', TIMESTAMP WITH TIME ZONE '2021-05-10T15:00:00Z', true, '/offers/1/resource/1/sections/1', 1);
+INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Terceira tarefa: favor revisar', TIMESTAMP WITH TIME ZONE '2021-05-28T21:30:00Z', true, '/offers/1/resource/1/sections/1', 1);
