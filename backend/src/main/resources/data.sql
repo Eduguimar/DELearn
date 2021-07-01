@@ -49,3 +49,13 @@ INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Segund
 INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Terceira tarefa: favor revisar', TIMESTAMP WITH TIME ZONE '2021-05-28T21:30:00Z', true, '/offers/1/resource/1/sections/1', 1);
 
 INSERT INTO tb_deliver (uri, moment, status, feedback, correct_Count, lesson_id, user_id, offer_id) VALUES ('https://github.com/Eduguimar/DELearn', TIMESTAMP WITH TIME ZONE '2021-06-01T11:35:00Z', 1, 'Muito bom parssa', 10, 4, 1, 1);
+
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do Tópico 1', 'Texto do tópico 1', TIMESTAMP WITH TIME ZONE '2021-05-09T17:20:00Z', 1, 1, 1);
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do Tópico 2', 'Texto do tópico 2', TIMESTAMP WITH TIME ZONE '2021-05-09T23:18:25Z', 2, 1, 1);
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do Tópico 3', 'Texto do tópico 3', TIMESTAMP WITH TIME ZONE '2021-05-10T11:12:51Z', 2, 1, 2);
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do Tópico 4', 'Texto do tópico 4', TIMESTAMP WITH TIME ZONE '2021-05-10T12:10:20Z', 1, 1, 2);
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do Tópico 5', 'Texto do tópico 5', TIMESTAMP WITH TIME ZONE '2021-05-11T13:52:11Z', 1, 1, 3);
+INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do Tópico 6', 'Texto do tópico 6', TIMESTAMP WITH TIME ZONE '2021-06-21T14:42:00Z', 2, 1, 3);
+
+INSERT INTO tb_topic_likes (user_id, topic_id) VALUES (1, 2);
+INSERT INTO tb_topic_likes (user_id, topic_id) VALUES (2, 1);

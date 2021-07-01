@@ -29,16 +29,18 @@ public class Offer implements Serializable {
     @OneToMany(mappedBy = "offer")
     private List<Resource> resources = new ArrayList<>();
 
+    @OneToMany(mappedBy = "offer")
+    private List<Topic> topics = new ArrayList<>();
+
     public Offer() {
     }
 
-    public Offer(Long id, String edition, Instant startMoment, Instant endMoment, Course course, List<Resource> resources) {
+    public Offer(Long id, String edition, Instant startMoment, Instant endMoment, Course course) {
         this.id = id;
         this.edition = edition;
         this.startMoment = startMoment;
         this.endMoment = endMoment;
         this.course = course;
-        this.resources = resources;
     }
 
     public Long getId() {
@@ -83,6 +85,10 @@ public class Offer implements Serializable {
 
     public List<Resource> getResources() {
         return resources;
+    }
+
+    public List<Topic> getTopics() {
+        return topics;
     }
 
     @Override
