@@ -59,3 +59,8 @@ INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUE
 
 INSERT INTO tb_topic_likes (user_id, topic_id) VALUES (1, 2);
 INSERT INTO tb_topic_likes (user_id, topic_id) VALUES (2, 1);
+
+INSERT INTO tb_reply (body, moment, author_id, topic_id) VALUES ('Tente reiniciar o computador', TIMESTAMP WITH TIME ZONE '2021-05-10T09:50:03Z', 2, 1);
+INSERT INTO tb_reply (body, moment, author_id, topic_id) VALUES ('Deu certo, valeu!', TIMESTAMP WITH TIME ZONE '2021-05-10T12:02:50Z', 1, 1);
+
+INSERT INTO tb_reply_likes (user_id, reply_id) VALUES (1, 1);
