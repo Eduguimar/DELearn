@@ -48,7 +48,7 @@ INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Primei
 INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Segunda tarefa: favor revisar', TIMESTAMP WITH TIME ZONE '2021-05-10T15:00:00Z', true, '/offers/1/resource/1/sections/1', 1);
 INSERT INTO tb_notification (text, moment, read, route, user_id) VALUES ('Terceira tarefa: favor revisar', TIMESTAMP WITH TIME ZONE '2021-05-28T21:30:00Z', true, '/offers/1/resource/1/sections/1', 1);
 
-INSERT INTO tb_deliver (uri, moment, status, feedback, correct_Count, lesson_id, user_id, offer_id) VALUES ('https://github.com/Eduguimar/DELearn', TIMESTAMP WITH TIME ZONE '2021-06-01T11:35:00Z', 1, 'Muito bom parssa', 10, 4, 1, 1);
+INSERT INTO tb_deliver (uri, moment, status, feedback, correct_Count, lesson_id, user_id, offer_id) VALUES ('https://github.com/Eduguimar/DELearn', TIMESTAMP WITH TIME ZONE '2021-06-01T11:35:00Z', 0, null, null, 4, 1, 1);
 
 INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do Tópico 1', 'Texto do tópico 1', TIMESTAMP WITH TIME ZONE '2021-05-09T17:20:00Z', 1, 1, 1);
 INSERT INTO tb_topic (title, body, moment, author_id, offer_id, lesson_id) VALUES ('Título do Tópico 2', 'Texto do tópico 2', TIMESTAMP WITH TIME ZONE '2021-05-09T23:18:25Z', 2, 1, 1);
