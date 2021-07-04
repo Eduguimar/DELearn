@@ -1,5 +1,6 @@
 package com.devsuperior.delearnbds.services;
 
+import com.devsuperior.delearnbds.dto.UserDTO;
 import com.devsuperior.delearnbds.entities.User;
 import com.devsuperior.delearnbds.repositories.UserRepository;
 import org.slf4j.Logger;
@@ -9,6 +10,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import javax.persistence.EntityNotFoundException;
+import java.util.Optional;
 
 @Service
 public class UserService implements UserDetailsService {
@@ -17,6 +22,14 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     UserRepository repository;
+
+    @Transactional(readOnly = true)
+    public UserDTO findById(Long id) {
+        Optional<User> obj = repository.findById(id);
+        User user = obj.orElseThrow(() -> new EntityNotFoundException("Entity not found"));
+        return new UserDTO(user);
+    }
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
